@@ -45,13 +45,13 @@ def feasible_guess(usr_guess):
         return True
     return False
 
+
 if __name__ == '__main__':
     selected_word = choose_random_word()
-    print(selected_word)
     correct = False
     op = []
-    while correct == False: 
-        print('')            
+    while correct == False:
+        print('')
         usr_guess = input('enter your guess: ').casefold()
         if feasible_guess(usr_guess):
             if check_guess(usr_guess, selected_word) == [2, 2, 2, 2, 2]:
@@ -61,7 +61,7 @@ if __name__ == '__main__':
                 break
             else:
                 guess = check_guess(usr_guess, selected_word)
-                usr_guess_list=list(usr_guess)
+                usr_guess_list = list(usr_guess)
                 for i in range(len(usr_guess_list)):
                     if guess[i] == 0:
                         op.append('')
@@ -73,9 +73,10 @@ if __name__ == '__main__':
                         op.append(Fore.GREEN)
                         op.append(usr_guess_list[i].upper())
                 print()
-                op.append('\n') 
+                op.append('\n')
                 for i in range(1, len(op), 2):
                     print(op[i-1] + op[i], end='')
                 print()
         else:
-            print(Back.RED + "guess must be only contain alphabets and must be 5 characters long")
+            print(
+                Back.RED + "guess must be only contain alphabets and must be 5 characters long")
