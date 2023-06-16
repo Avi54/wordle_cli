@@ -15,7 +15,7 @@ To play the game, open a terminal or command prompt window and navigate to the d
 Then, run the following command:
 
 ```
-pythob app.py
+python app.py
 ```
 
 This will start the game. Follow the on-screen instructions to guess the hidden word and receive feedback on your guesses.
